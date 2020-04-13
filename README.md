@@ -157,7 +157,8 @@ Before we can do that we need to create an IAM role to allow us access to ECS.
 
 I have created a file called `task-execution-assume-role.json` that we will use to create the ecsTaskExecutionRole from the CLI. 
 
-```{
+```
+{
     "Version": "2012-10-17",
     "Statement": [
         {
