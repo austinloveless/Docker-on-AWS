@@ -133,7 +133,7 @@ Now that the CLI is configured we can tag our docker image and upload it to ECR.
 
 First, we need to login to ECR. 
 
-Run the command `aws ecr get-login --no-include-email`. The output should be `docker login -u AWS -p` followed by a token that is valid for 12 hours. Copy and run that command as well. This will authenticate you with Amazon ECR. If successful you should see "Login Succeeded". 
+Run the command `aws ecr get-login-password --region <region> | docker login --username AWS --password-stdin <account-id>.dkr.ecr.<region>.amazonaws.com`. This will authenticate you with Amazon ECR. If successful you should see "Login Succeeded". 
 
 Create an ECR Repository by running `aws ecr create-repository --repository-name docker-on-aws/nodejs`. That's the cluster name followed by the image name. Take note of the `repositoryUri` in the output.
 
