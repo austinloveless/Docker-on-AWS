@@ -8,6 +8,6 @@ RUN npm install && mv node_modules /node_modules
 
 COPY . .
 
-LABEL maintainer="Austin Loveless"
+LABEL maintainer="Austin Loveless - Forked by Callum Hemsley"
 
 CMD node app.js
